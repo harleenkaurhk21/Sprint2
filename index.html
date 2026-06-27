@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cash Flow Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>Cash-Flow Dashboard</h1>
+
+
+<div id="alert"></div>
+
+
+
+<form id="expenseForm">
+
+
+<input 
+type="number"
+id="salary"
+placeholder="Total Salary"
+min="0"
+>
+
+
+<input 
+type="text"
+id="expenseName"
+placeholder="Expense Name"
+>
+
+
+<input 
+type="number"
+id="expenseAmount"
+placeholder="Expense Amount"
+min="0"
+>
+
+
+<button type="submit">
+Add Expense
+</button>
+
+
+</form>
+
+
+
+
+<div class="summary">
+
+
+<h2>
+Total Salary:
+₹<span id="totalSalary">0</span>
+</h2>
+
+
+<h2>
+Remaining Balance:
+₹<span id="balance">0</span>
+</h2>
+
+
+</div>
+
+
+
+
+
+<h2>Expense List</h2>
+
+
+<ul id="expenseList"></ul>
+
+
+
+
+<canvas id="chart"></canvas>
+
+
+
+
+<button onclick="downloadPDF()">
+Download Report
+</button>
+
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
