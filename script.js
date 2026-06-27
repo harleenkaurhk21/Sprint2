@@ -1,55 +1,24 @@
 let salary =
 Number(localStorage.getItem("salary")) || 0;
-
-
-
 let expenses =
 JSON.parse(localStorage.getItem("expenses")) || [];
-
-
-
 let chart;
-
-
-
 const form =
 document.getElementById("expenseForm");
-
-
-
-
 form.addEventListener("submit",function(e){
-
-
 e.preventDefault();
-
-
-
 let salaryValue =
 Number(document.getElementById("salary").value);
-
-
-
 let name =
 document.getElementById("expenseName").value.trim();
-
-
-
 let amount =
 Number(document.getElementById("expenseAmount").value);
-
-
-
-
-
 if(
 name === "" ||
 salaryValue < 0 ||
 amount <= 0
 ){
-
 showAlert("Please enter valid data");
-
 return;
 
 }
@@ -98,90 +67,35 @@ form.reset();
 
 
 });
-
-
-
-
-
-
-
 function saveData(){
-
-
 localStorage.setItem(
 "salary",
 salary
 );
-
-
-
 localStorage.setItem(
 "expenses",
 JSON.stringify(expenses)
 );
-
-
-
 }
-
-
-
-
-
-
-
-
-
 function displayData(){
-
-
-
 document.getElementById(
 "totalSalary"
 ).innerHTML = salary;
-
-
-
-
-
 let list =
 document.getElementById("expenseList");
-
-
 list.innerHTML="";
-
-
-
 let totalExpense=0;
-
-
-
-
-
 expenses.forEach(item=>{
-
-
-
 totalExpense += item.amount;
-
-
-
 let li =
 document.createElement("li");
-
-
-
 li.innerHTML = `
-
 <span>
-
 ${item.name}
 -
 ₹${item.amount}
 
 </span>
-
-
 <button 
 class="delete"
 onclick="deleteExpense(${item.id})">
