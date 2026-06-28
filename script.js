@@ -32,24 +32,9 @@ amount:amount
 expenses.push(expense);
 saveData();
 displayData();
-
-
-
 form.reset();
-
-
-
 });
-
-
-
-
-
-
-
 function saveData(){
-
-
 localStorage.setItem(
 "salary",
 salary
