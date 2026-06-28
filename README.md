@@ -29,6 +29,8 @@ This project allows users to manage salary, track expenses, and view real-time b
 
 
 ## Project Structure
+
+```text
 Sprint2/
 │
 ├── index.html
@@ -36,3 +38,4 @@ Sprint2/
 ├── script.js
 ├── README.md
 └── prompt.md
+```
