@@ -257,13 +257,16 @@ document.getElementById("alert");
 
 
 
-if(
-salary > 0 &&
-balance < salary*0.10
-){
+if(salaryInput > 0){
 
+salary = salaryInput;
 
+localStorage.setItem(
+"salary",
+salary
+);
 
+}
 alert.innerHTML =
 "⚠ Warning: Balance is below 10% of salary";
 
@@ -370,17 +373,12 @@ pdf.save(
 
 
 }
-
-
-
-
-
-
-
-
-
 window.onload=function(){
 
-displayData();
+salary = Number(localStorage.getItem("salary")) || 0;
+
+expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+
+render();
 
 }
