@@ -37,5 +37,5 @@ Sprint2/
 ├── style.css
 ├── script.js
 ├── README.md
-└── prompt.md
+└── Prompt.md
 ```
