@@ -29,3 +29,10 @@ This project allows users to manage salary, track expenses, and view real-time b
 
 
 ## Project Structure
+Sprint2/
+│
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+└── prompt.md
