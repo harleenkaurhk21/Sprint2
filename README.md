@@ -7,7 +7,7 @@ This project allows users to manage salary, track expenses, and view real-time b
 
 ## 🚀 Live Demo
 
-
+https://sprint2-flax.vercel.app/
 
 ## Features
 
