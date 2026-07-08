@@ -5,6 +5,10 @@
 A functional financial dashboard built using **Vanilla JavaScript**.  
 This project allows users to manage salary, track expenses, and view real-time balance updates.
 
+## 🚀 Live Demo
+
+
+
 ## Features
 
 - Add total salary
